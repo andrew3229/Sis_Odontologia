@@ -3,7 +3,7 @@
 class Mpaciente extends CI_Model
 {
     function __construct(){
-        parent::__construct();
+        parent:: __construct();
     }
 
     public function guardar($param){ //se envia un array "param" de toda la información del paciente
@@ -20,7 +20,7 @@ class Mpaciente extends CI_Model
           'paciente_cedula'=>$param['paciente_cedula'],
           'paciente_medico_cabecera'=>$param['paciente_medico_cabecera']
           );
-          echo "enctra";
+
           #almacena la información en la tabla principal
           $this->db->insert('paciente',$campos);
     }
