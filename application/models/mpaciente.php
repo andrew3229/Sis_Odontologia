@@ -21,7 +21,7 @@ class Mpaciente extends CI_Model
           'paciente_medico_cabecera'=>$param['paciente_medico_cabecera']
           );
 
-          #almacena la información en la tabla principal
+          #almacena la información en la tabla principal de bd
           $this->db->insert('paciente',$campos);
     }
 }

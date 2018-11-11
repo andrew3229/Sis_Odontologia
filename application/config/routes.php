@@ -49,6 +49,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'cpaciente'; #Define el controlador con el que se iniciara
+$route['default_controller'] = 'cusuario'; #Define el controlador con el que se iniciara
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
