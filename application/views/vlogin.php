@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <form action="" method="POST">
+    <form action="<?php echo base_url();?>clogin/login" method="POST">
         <table>
             <tr>
                 <td><label>Usuario:</label></td>

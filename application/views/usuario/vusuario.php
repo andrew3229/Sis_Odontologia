@@ -57,7 +57,11 @@
                 <td colspan=2><input type="submit" value="Guardar" ></td>
             </tr>
             
+                
         </table>
+
+        <a href="<?php echo base_url();?>clogin">Ingresar al sistema</a>
+
     
     
     </form>
