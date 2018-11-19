@@ -22,4 +22,19 @@ class Musuario extends CI_Model
           #almacena la información en la tabla principal de bd
           $this->db->insert('usuario',$campos);
     }
+
+
+    public function actualizarDatos($param){
+        $campos = array(
+            'usuario_nick'=>$param['usuario_nick'],
+            'usuario_nombre'=>$param['usuario_nombre'],
+            'usuario_apellido'=>$param['usuario_apellido']
+        );
+
+          #actualiza la información en la tabla de usuario/medico de bd
+          $this->db->where('usuario_id',$this->session->userdata('session_usuario_id'));//recibe el parametro de la sesion para identificar el medico
+          $this->db->update('usuario',$campos);
+
+        return 1;
+    }
 }

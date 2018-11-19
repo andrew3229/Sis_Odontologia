@@ -22,5 +22,8 @@
             <td><input type="submit" value="Ingreso"></td>
         </table>
     </form>
+    <?php 
+        echo $mensaje;
+    ?>
 </body>
 </html>

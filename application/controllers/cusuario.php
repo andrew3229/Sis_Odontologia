@@ -33,4 +33,16 @@ class Cusuario extends CI_Controller
         $this->musuario->guardar($param);   
         
     }
+
+    //se modifica la información del medico
+    public function actualizarDatos(){
+       
+        $param['usuario_nombre']=$this->input->post('txtNombre');
+        $param['usuario_apellido']=$this->input->post('txtApellido');
+        $param['usuario_nick']=$this->input->post('txtNick');
+        $this->musuario->actualizarDatos($param);
+
+        $this->load->view('usuario/vusuario'); 
+        //redirect ('cusuario/index');
+    }
 }

@@ -15,8 +15,9 @@ class Mlogin extends CI_Model{
         if ($res->num_rows()==1) {
            $r=$res->row();
            $session_datos=array(
-            'sessison_usuario_nombre' => $r->usuario_nombre,   //identifico el nombre del usuario con el que ingreso a la sesion y los demas datos
-            'session_usuario_apellido' => $r->usuario_apellido
+           //identifico el nombre del usuario con el que ingreso a la sesion y los demas datos
+            'session_usuario_id'=>$r->usuario_id,
+            'session_usuario_datos' => $r->usuario_nombre.",".$r->usuario_apellido.",".$r->usuario_nick
            );
            
            $this->session->set_userdata($session_datos);

@@ -8,7 +8,8 @@
         }
 
         public function index(){
-            $this->load->view('vlogin');
+            $data['mensaje']='';
+            $this->load->view('vlogin',$data);
         }
 
         public function login(){
@@ -19,10 +20,11 @@
             
 
             if ($res==1) {
-               $this->load->view('usuario/vupdateusuario');
+               $this->load->view('usuario/vupdateusuario'); //ingreso a la pantalla del medico principal
              
             }else{
-               $this->load->view('vlogin');
+                $data['mensaje']="usuario o contraseña erronea";
+                $this->load->view('vlogin',$data);
               
 
             }

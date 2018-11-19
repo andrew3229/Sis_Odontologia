@@ -22,6 +22,6 @@ class Mpaciente extends CI_Model
           );
 
           #almacena la información en la tabla principal de bd
-          $this->db->insert('paciente',$campos);
+          $this->db->insert('paciente',$campos); 
     }
 }
