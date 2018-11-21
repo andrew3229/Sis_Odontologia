@@ -23,7 +23,7 @@ class Musuario extends CI_Model
           $this->db->insert('usuario',$campos);
     }
 
-
+    //actualiza la información del medico
     public function actualizarDatos($param){
         $campos = array(
             'usuario_nick'=>$param['usuario_nick'],
@@ -36,5 +36,12 @@ class Musuario extends CI_Model
           $this->db->update('usuario',$campos);
 
         return 1;
+    }
+
+
+    //elimina la información de un médico
+    public function eliminarUsuario($param){      
+        $this->db->where('usuario_id',$param);
+        $this->db->delete('usuario');
     }
 }

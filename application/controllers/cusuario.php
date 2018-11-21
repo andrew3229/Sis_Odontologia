@@ -45,4 +45,14 @@ class Cusuario extends CI_Controller
         $this->load->view('usuario/vusuario'); 
         //redirect ('cusuario/index');
     }
+
+
+    //elimina la información de un médico
+    public function eliminarUsuario(){
+        $idU=$this->input->post('txtIdUsuario');
+        $this->musuario->eliminarUsuario($idU);
+    }
+
+
+
 }
